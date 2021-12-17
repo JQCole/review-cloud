@@ -76,7 +76,7 @@ def plot_cloud(wordcloud):
 	plt.imshow(wordcloud)
 	plt.axis("off")
 
-mask = np.array(Image.open('camera.png'))
+mask = np.array(Image.open('camera.png')) # local mask reference
 
 # additional stop words in different languages
 stopword_lang = ["c'est",'alors',"j'étais",'à','acune','algo','au','de','aucun','juste','sujet','último','estará','podia','un','desde','cierto','lo','empleas','die'
@@ -134,6 +134,4 @@ stopword_lang = ["c'est",'alors',"j'étais",'à','acune','algo','au','de','aucun
 # generate word cloud
 wordcloud = WordCloud(width= 3000, height = 2000, random_state=1, background_color='white', colormap='inferno', collocations=False, stopwords = stopword_lang, mask=mask, min_word_length= 3).generate(wc)
 plot_cloud(wordcloud)
-wordcloud.to_file("wordcloud.png")
-
-# viridis
+wordcloud.to_file("wordcloud.png") # local save file
