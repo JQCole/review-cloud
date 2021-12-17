@@ -17,7 +17,7 @@ moviename = input('Enter Movie Name:')
 pagenumber = input('Enter Maximum Page Number:')
 URL = f"https://letterboxd.com/film/{moviename}/reviews/by/activity/"
 
-if pagenumber is not None:
+if pagenumber !='':
 	try:
 		maxpagenumber = int(pagenumber)
 	except:
@@ -57,9 +57,10 @@ while True:
 		driver.execute_script("return arguments[0].scrollIntoView(true);", WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.XPATH, "//*[@id='content']/div/div/section/section/div/div[2]/a"))))
 		driver.find_element(By.XPATH, "//*[@id='content']/div/div/section/section/div/div[2]/a").click()
 		URL = driver.current_url # switch to next page
-		if URL == f"https://letterboxd.com/film/{moviename}/reviews/by/activity/page/{maxpagenumber}/":
-			print('Done')
-			break
+		if pagenumber !='':
+			if URL == f"https://letterboxd.com/film/{moviename}/reviews/by/activity/page/{maxpagenumber}/":
+				print('Done')
+				break
 	except TimeoutException:
 		print('Finished')
 		break
@@ -76,7 +77,7 @@ def plot_cloud(wordcloud):
 	plt.imshow(wordcloud)
 	plt.axis("off")
 
-mask = np.array(Image.open('camera.png'))
+mask = np.array(Image.open('camera.png')) # local image reference
 
 # additional stop words in different languages
 stopword_lang = ["c'est",'alors',"j'étais",'à','acune','algo','au','de','aucun','juste','sujet','último','estará','podia','un','desde','cierto','lo','empleas','die'
@@ -132,8 +133,6 @@ stopword_lang = ["c'est",'alors',"j'étais",'à','acune','algo','au','de','aucun
 'deshalb','mußt','zu','estar','poderá','fueron','bastante','trabajais','primero','cada','sollst','much'] + list(STOPWORDS)
 
 # generate word cloud
-wordcloud = WordCloud(width= 3000, height = 2000, random_state=1, background_color='white', colormap='inferno', collocations=False, stopwords = stopword_lang, mask=mask, min_word_length= 3).generate(wc)
+wordcloud = WordCloud(width= 3000, height = 2000, random_state=1, background_color='white', colormap='RdYlGn', collocations=False, stopwords = stopword_lang, mask=mask, min_word_length= 3).generate(wc)
 plot_cloud(wordcloud)
-wordcloud.to_file("wordcloud.png")
-
-# viridis
+wordcloud.to_file("wordcloud.png") # local save file
