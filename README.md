@@ -23,6 +23,13 @@ Occasionally, a person's impressions will be similar to another's. I thought a w
 
 At first glance I have a few takeaways from the impressions this movie left on people. I see the words "character" and "message" and immediately know the characters and the message of the film were strong to many of the viewers. I also see the words "still" and "today" which, from reading through reviews, I know is the result of a lot of people discussing how even today, the movie's climactic scene is still relevant (another word in the cloud). 
 
+Here's another example that proves Heath Ledger's Joker was the best part of *The Dark Knight*. 
+
+|![dark knight](https://user-images.githubusercontent.com/95309435/146657033-517253f6-2741-47ac-b083-31bf3b8fd15e.png)|
+|:--:|
+| <b>Image Mask: https://flyclipart.com/camera-clipart-png-action-png-491541</b>|
+
+
 ### Troubleshooting the Code
 
 One issue I encountered while trying to compile the reviews so the text could be used in a word cloud was expanding the collapsed reviews. On the Letterboxd website if a review is too long, you can click the 'more' button to expand it, but trying to make sure the more button was clickable on each instance seemed overly complicated. Luckily, and I do mean luckily, each review has its own URL within the HTML. All that was necessary from this point was combining that portion of the URL with the Letterboxd domain then navigating to each review's individual site and pulling the text from this new all text page:
