@@ -25,7 +25,7 @@ At first glance I have a few takeaways from the impressions this movie left on p
 
 Here's another example that proves Heath Ledger's Joker was the best part of *The Dark Knight*. 
 
-|![dark knight](https://user-images.githubusercontent.com/95309435/146657033-517253f6-2741-47ac-b083-31bf3b8fd15e.png)|
+|![wordcloud](https://user-images.githubusercontent.com/95309435/146658270-abb67dfd-a99e-4c76-815b-299fd095ea7b.png)|
 |:--:|
 | <b>Image Mask: https://flyclipart.com/camera-clipart-png-action-png-491541</b>|
 
